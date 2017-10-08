@@ -21,6 +21,7 @@ class CreateMeetsTable extends Migration
             $table->string('lat');
             $table->string('lng');
             $table->text('description');
+            $table->tinyInteger('deleted')->default(0);
             $table->timestamps();
         });
     }
