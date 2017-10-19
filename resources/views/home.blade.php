@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
         <div>
-            <div class="profile_border white flex-row flex-j-around flex-a-center">
+            <div class=" green profile_border white flex-row flex-j-around flex-a-center">
                 <h2>Motorcyclist: <b>{{$users}}</b></h2>
                 <h2>MotoMeets: <b>{{$meets}}</b></h2>
             </div>

@@ -133,10 +133,6 @@ p, li {
 		padding: 0.5em;
 		margin: 0;
 	}
-
-	b {
-		color: lightgreen;
-	}
 }
 
 .rules {
@@ -159,5 +155,15 @@ textarea {
 	}
 	p {
 		margin-bottom: 0.5em;
+	}
+}
+
+.title_max {
+	max-width: 500px;
+}
+
+.green {
+		b {
+		color: lightgreen;
 	}
 }

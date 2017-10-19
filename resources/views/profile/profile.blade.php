@@ -18,7 +18,7 @@
                <div class="col-md-12 upcoming_meets">
                    <a href="{{ url('/meet')}}/{{$item->meet_id}}"><h3>{{$item->meet->title}}</h3></a>
                    <div class="meet_deets flex-row flex-j-between">
-                       <p><b>Location:</b> {{ $item->location }}</p>
+                       <p><b>Location:</b> {{ $item->meet->location }}</p>
                        <p><b>Date:</b> {{ \Carbon\Carbon::parse($item->meet_date)->format('d/m/Y')}}</p>
                        <p><b>Time:</b> {{ \Carbon\Carbon::parse($item->meet_date)->format('H:m A')}}</p>
                    </div>
@@ -48,11 +48,11 @@
             
            @foreach($comments as $item)
                <div class="col-md-12 upcoming_meets">
-                   <a href="{{ url('/meet')}}/{{$item->meet_id}}"><h3>{{$item->meet->title}}</h3></a>
+                   <a href="{{ url('/meet')}}/{{$item->meet_id}}"><h3>{{$item->comment}}</h3></a>
                    <div class="meet_deets flex-row flex-j-between">
-                       <p><b>Location:</b> {{ $item->location }}</p>
-                       <p><b>Date:</b> {{ \Carbon\Carbon::parse($item->meet_date)->format('d/m/Y')}}</p>
-                       <p><b>Time:</b> {{ \Carbon\Carbon::parse($item->meet_date)->format('H:m A')}}</p>
+                       <p><b>Meet Up:</b> {{ $item->meet->title }}</p>
+                       <p><b>Date:</b> {{ \Carbon\Carbon::parse($item->created_at)->format('d/m/Y')}}</p>
+                       <p><b>Time:</b> {{ \Carbon\Carbon::parse($item->created_at)->format('H:m A')}}</p>
                    </div>
                </div>
            @endforeach 

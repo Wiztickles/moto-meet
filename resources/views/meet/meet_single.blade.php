@@ -9,7 +9,7 @@
             @else
                 <div class="info">
                     <div class="meet_tile flex-row flex-j-between flex-a-center bot_mar">
-                        <h1>{{$meet->title}}</h1>
+                        <h1 class="title_max">{{$meet->title}}</h1>
                         @if(Auth::check())
                             @if($status === null)
                                 <form class="" role="form" method="POST" action="{{ url('attend') }}">
@@ -140,7 +140,7 @@
                     <div class="col-md-12 col-md-offset-0">
                         <div class="comment">
                             <div>
-                                <a href="{{ url('profile/')}}/{{$comment->user->username}}">
+                                <a href="{{ url('profile/')}}/{{$comment->user->id}}">
                                     <b>{{$comment->user->username}}</b>
                                 </a>
                             </div>
